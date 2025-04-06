@@ -1,7 +1,7 @@
 // Dados da publicação
 var dados = {
     titulo: "Título da Publicação",
-    imagem: "https://images2.imgbox.com/d1/89/ZFgaOvfy_o.jpg",
+    imagem: "https://images2.imgbox.com/75/41/FJdl4zyW_o.jpg",
     descricao: "Descrição detalhada da publicação.",
     link1: "URL_DO_DOWNLOAD_1",
     link1_texto: "DISCO 1",
