@@ -3,7 +3,7 @@ const params = new URLSearchParams(window.location.search);
 const publicacao = params.get("publicacao");
 
 // Carrega o arquivo JSON correspondente à publicação
-fetch(`publicacao-${publicacao}.json`)
+fetch(`dados/publicacao-${publicacao}.json`)
   .then((response) => response.json())
   .then((dados) => {
     // Substitui os placeholders pelos dados da publicação
