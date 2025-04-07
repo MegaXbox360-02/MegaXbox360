@@ -7,6 +7,13 @@ const publicacao = params.get("publicacao");
 fetch(`dados/${categoria}/${categoria}-${publicacao}.json`)
   .then((response) => response.json())
   .then((dados) => {
+    // Gera os botões de download
+    let botoesHtml = "";
+    dados.downloads.forEach((download) => {
+      botoesHtml += `<a href="${download.url}" class="botao">${download.texto}</a>`;
+    });
+    dados.botoes = botoesHtml;
+
     // Substitui os placeholders pelos dados da publicação
     fetch("download-template.html")
       .then((response) => response.text())
