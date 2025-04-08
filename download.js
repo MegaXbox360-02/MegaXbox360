@@ -10,7 +10,7 @@ fetch(`dados/${categoria}/${categoria}-${publicacao}.json`)
     // Gera os botões de download
     let botoesHtml = "";
     dados.downloads.forEach((download) => {
-      botoesHtml += `<a href="${download.url}" class="botao">${download.texto}</a>`;
+      botoesHtml += `<a href="${download.url}" class="botao" target="_blank">${download.texto}</a>`;
     });
     dados.botoes = botoesHtml;
 
