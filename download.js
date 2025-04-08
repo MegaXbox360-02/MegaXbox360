@@ -10,7 +10,8 @@ fetch(`dados/${categoria}/${categoria}-${publicacao}.json`)
     // Gera os botões de download
     let botoesHtml = "";
     dados.downloads.forEach((download) => {
-      botoesHtml += `<a href="${download.url}" class="botao" target="_blank">${download.texto}</a>`;
+      const urlDecodificada = atob(download.url);
+      botoesHtml += `<a href="${urlDecodificada}" class="botao" target="_blank">${download.texto}</a>`;
     });
     dados.botoes = botoesHtml;
 
