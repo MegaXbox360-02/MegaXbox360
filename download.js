@@ -15,7 +15,7 @@ fetch("config.json")
         // Verifica se a categoria e o jogo existem no arquivo de configuração
         if (config.categorias[categoria] && config.categorias[categoria].includes(jogo)) {
             // Constrói o caminho do arquivo JSON
-            const caminhoArquivo = `dados/${categoria}/${jogo}.json`;
+            const caminhoArquivo = `data/${categoria}/${jogo}.json`;
 
             // Carrega o arquivo JSON da publicação
             fetch(caminhoArquivo)
